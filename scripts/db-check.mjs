@@ -19,5 +19,3 @@ try {
   console.error("❌ Database connection failed:\n", err);
   process.exit(1);
 }
-
-
