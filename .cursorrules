@@ -1,0 +1,112 @@
+# Cursor Rules
+
+## Instructions
+
+- Record fixes for mistakes or corrections to avoid repetition in the `Lessons` section.
+- Organize thoughts and plan steps before starting a task in the `Scratchpad` section.
+- Clear old tasks if necessary.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update Scratchpad after completing subtasks.
+- Reflect and plan after milestones for better task management.
+- Always refer to Scratchpad before planning the next step.
+
+## Lessons
+
+## Scratchpad
+
+
+# Astroqua – Development Steps (Website + Admin Dashboard)
+
+## Phase 0 — Foundations
+- [X] Initialize Next.js 15 + TypeScript in existing repo; ensure App Router enabled
+- [X] Configure `eslint`, `prettier`, `tsconfig` path aliases, strict mode
+- [ ] Install dependencies: shadcn/ui, lucide-react, zod, zustand, recharts, resend, uploadthing, prisma, @prisma/client, pg
+- [ ] Add `@vercel/postgres` or standard `pg` client for local dev; confirm Postgres connection
+- [ ] Initialize Prisma; create `.env` with `DATABASE_URL`, `RESEND_API_KEY`, `UPLOADTHING_SECRET`, `UPLOADTHING_APP_ID`
+- [ ] Set up `shadcn/ui` init; generate base components (button, card, input, textarea, badge, dialog, dropdown, tooltip, sheet, skeleton)
+
+## Phase 1 — Brand & Theming
+  - [ ] Add fonts via `next/font`: Space Grotesk (headings), Inter (body)
+- [ ] Create theme tokens in CSS variables for colors per brief:
+  - [ ] Background: #000000 with layered radial gradients (rgba(49, 39, 131, 0.2), rgba(124, 63, 151, 0.2))
+  - [ ] Primary accent: hsl(213, 100%, 85%)
+  - [ ] Secondary accent: hsl(175, 90%, 45%)
+  - [ ] Text: hsl(210, 40%, 98%)
+- [ ] Configure shadcn theme to align tokens; hover/active states using glow accents
+- [ ] Implement text-glow utilities (text-shadow presets) for Space Grotesk headlines
+- [ ] Global layout scaffolding in `src/app/layout.tsx` with glassy containers
+
+## Phase 2 — Core Animations & Utilities
+- [ ] Build `components/animated-background.tsx`:
+  - [ ] Starfield: randomized twinkle opacity/scale; low CPU via CSS keyframes + requestAnimationFrame batching only if needed
+  - [ ] Bubbles: upward float with varied size/duration; subtle blur; parallax layer separation
+- [ ] Build `lib/scroll-reveal.tsx` as hook + component:
+  - [ ] IntersectionObserver-based `fade-in-up` (opacity 0 → 1, translateY 20px → 0)
+  - [ ] Accept `delay` prop for staggered reveals
+  - [ ] Reduce motion respect via `prefers-reduced-motion`
+- [ ] Create motion utility classes for bounce arrow (hero prompt)
+
+## Phase 3 — Storytelling Site (Public)
+- [ ] Hero section in `src/app/page.tsx` with layered background, headline/subhead glow, bounce ArrowDown
+- [ ] Timeline section with central vertical line; alternating cards (glass, hover border highlight, image hover scale-105)
+- [ ] Article index grid with animated cards, filters (tags/topics), search
+- [ ] Article page template: cover image/video, byline, reading progress, glowing pull-quotes, footnotes
+- [ ] Reusable CTA bars using secondary accent for AI features
+- [ ] SEO: metadata, OpenGraph, social images
+
+## Phase 4 — AI Generator (UX shell, optional backend later)
+- [ ] Section scaffolding for AI storyline generator UI (secondary accent)
+- [ ] Inputs validated by Zod; client state via Zustand; staged scroll-reveal
+- [ ] Placeholder generation flow; hook in real model later (out of scope now)
+
+## Phase 5 — Data Layer & Models
+- [ ] Prisma schema: `User`, `Article`, `Tag`, `ArticleTag`, `MediaAsset`, `Role`
+  - [ ] `Article`: id, title, slug, excerpt, content (Rich/MD), coverUrl, status (draft/published), publishedAt, authorId
+  - [ ] `MediaAsset`: id, url, type, width, height, blurhash, createdById
+  - [ ] Roles: admin/editor for dashboard permissions
+- [ ] Migrate DB; seed initial admin user and sample tags
+- [ ] Add slug generation + unique constraints
+
+## Phase 6 — Uploads & Email
+- [ ] Configure Uploadthing routes/policy for images/video; client uploader component
+- [ ] Image optimization strategy (Next/Image) + blur placeholders
+- [ ] Resend setup: domain + sender; transactional template for “Article Published”
+- [ ] Trigger email on publish transition (admin only)
+
+## Phase 7 — Admin Dashboard
+- [ ] Route group `src/app/(admin)/admin` with protected layout
+- [ ] Auth strategy (minimal): server-protected with middleware; temp password gate or bring in next-auth if needed
+- [ ] Dashboard pages: Overview, Articles, Media, Tags, Settings
+- [ ] Articles CRUD:
+  - [ ] List with filters/sort; inline status; bulk actions
+  - [ ] Editor page with title, slug, excerpt, rich content (MDX or tiptap), cover upload, tags, publish toggle
+  - [ ] Zod schemas; server actions for create/update/publish
+- [ ] Media library with Uploadthing integration
+- [ ] Analytics panel using Recharts: views over time (mock or DB), top articles, tags
+- [ ] Role-based access control (RBAC) checks on server actions
+
+## Phase 8 — Polish & Performance
+- [ ] Motion tuning: durations, easing, stagger consistency
+- [ ] Hover/active states for buttons/links with smooth color transitions
+- [ ] Lighthouse/Profiler pass; image sizes; font loading (swap); code-splitting where needed
+- [ ] a11y: contrast in dark theme, focus rings, reduced motion, semantic landmarks
+- [ ] 404/500 pages in-theme
+
+## Phase 9 — Ops & Delivery
+- [ ] Env var matrix for local/preview/prod; `.env.example`
+- [ ] Vercel deploy; Postgres provisioning; set secrets
+- [ ] Prisma migrate on deploy; seed guard
+- [ ] Monitoring/logging minimal setup; error boundary UX
+- [ ] Release notes and handover docs
+
+## Milestone Review Checklist
+- [ ] Foundations installed and working
+- [ ] Animations smooth with reduced-motion support
+- [ ] Storytelling pages feel immersive and readable
+- [ ] Admin can create, upload, tag, and publish articles
+- [ ] Emails send on publish; media pipeline stable
+- [ ] Analytics render without blocking UI
+- [ ] Deployed with correct envs and acceptable performance
+
