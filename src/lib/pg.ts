@@ -9,7 +9,6 @@ if (!databaseUrl) {
 
 declare global {
   // Using var to augment Node's global in dev HMR
-  // eslint-disable-next-line no-var
   var pgPool: Pool | undefined;
 }
 
