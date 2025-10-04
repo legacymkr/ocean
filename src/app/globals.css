@@ -189,6 +189,25 @@
     }
   }
 
+  /* Bubble rise animation - extremely slow upward float with horizontal drift */
+  @keyframes bubble-rise {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(var(--horizontal-movement));
+      opacity: 0;
+    }
+  }
+
+  .animate-bubble-rise {
+    animation: bubble-rise linear infinite;
+  }
+
   /* Ripple effect for buttons */
   .ripple-effect {
     position: relative;

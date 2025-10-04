@@ -41,14 +41,14 @@
 - [X] Update global layout with abyssal gradient background
 
 ## Phase 2 — Core Animations & Utilities
-- [ ] Build `components/animated-background.tsx`:
-  - [ ] Starfield: randomized twinkle opacity/scale; low CPU via CSS keyframes + requestAnimationFrame batching only if needed
-  - [ ] Bubbles: upward float with varied size/duration; subtle blur; parallax layer separation
-- [ ] Build `lib/scroll-reveal.tsx` as hook + component:
-  - [ ] IntersectionObserver-based `fade-in-up` (opacity 0 → 1, translateY 20px → 0)
-  - [ ] Accept `delay` prop for staggered reveals
-  - [ ] Reduce motion respect via `prefers-reduced-motion`
-- [ ] Create motion utility classes for bounce arrow (hero prompt)
+- [X] Build `components/animated-background.tsx`:
+  - [X] Bubbles: upward float with varied size/duration; subtle blur; horizontal drift (50 bubbles, 125-225s duration)
+  - [X] Randomized properties: size (3-16px), position, delay, horizontal movement
+- [X] Build `lib/hooks/use-scroll-reveal.ts` and `components/scroll-reveal.tsx`:
+  - [X] IntersectionObserver-based fade-in with translateY animation
+  - [X] Accept `delay` prop for staggered reveals (0ms, 200ms, 400ms)
+  - [X] Reduce motion respect via `prefers-reduced-motion`
+- [X] Apply animations to homepage: float-up on hero, scroll-reveal on cards with staggered delays
 
 ## Phase 3 — Storytelling Site (Public)
 - [ ] Hero section in `src/app/page.tsx` with layered background, headline/subhead glow, bounce ArrowDown

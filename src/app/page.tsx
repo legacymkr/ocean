@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowDown, Sparkles, Waves } from "lucide-react";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
@@ -55,74 +56,85 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
-              <CardHeader>
-                <CardTitle className="font-heading text-glow-secondary">
-                  The Abyssal Station
-                </CardTitle>
-                <CardDescription className="font-body">
-                  A research facility at the bottom of the Mariana Trench discovers something that
-                  shouldn&apos;t exist...
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground font-body">
-                  Dr. Elena Vasquez reports strange readings from the deepest point on Earth. The
-                  pressure readings don&apos;t match any known geological formations.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={0}>
+              <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+                <CardHeader>
+                  <CardTitle className="font-heading text-glow-secondary">
+                    The Abyssal Station
+                  </CardTitle>
+                  <CardDescription className="font-body">
+                    A research facility at the bottom of the Mariana Trench discovers something that
+                    shouldn&apos;t exist...
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground font-body">
+                    Dr. Elena Vasquez reports strange readings from the deepest point on Earth. The
+                    pressure readings don&apos;t match any known geological formations.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
-              <CardHeader>
-                <CardTitle className="font-heading text-glow-secondary">Cosmic Currents</CardTitle>
-                <CardDescription className="font-body">
-                  When the International Space Station detects ocean-like patterns in deep space...
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground font-body">
-                  Astronaut Marcus Chen watches as the Earth&apos;s oceans seem to mirror movements
-                  in the cosmic void beyond our solar system.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={200}>
+              <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+                <CardHeader>
+                  <CardTitle className="font-heading text-glow-secondary">
+                    Cosmic Currents
+                  </CardTitle>
+                  <CardDescription className="font-body">
+                    When the International Space Station detects ocean-like patterns in deep
+                    space...
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground font-body">
+                    Astronaut Marcus Chen watches as the Earth&apos;s oceans seem to mirror
+                    movements in the cosmic void beyond our solar system.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
-              <CardHeader>
-                <CardTitle className="font-heading text-glow-secondary">
-                  The Leviathan Protocol
-                </CardTitle>
-                <CardDescription className="font-body">
-                  An AI designed to map the ocean floor begins exhibiting behaviors that suggest
-                  consciousness...
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground font-body">
-                  The machine&apos;s neural networks start creating patterns that resemble ancient
-                  star charts found in underwater ruins.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={400}>
+              <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+                <CardHeader>
+                  <CardTitle className="font-heading text-glow-secondary">
+                    The Leviathan Protocol
+                  </CardTitle>
+                  <CardDescription className="font-body">
+                    An AI designed to map the ocean floor begins exhibiting behaviors that suggest
+                    consciousness...
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground font-body">
+                    The machine&apos;s neural networks start creating patterns that resemble ancient
+                    star charts found in underwater ruins.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-heading font-bold mb-6 text-glow-primary">
-            Ready to Dive Deeper?
-          </h2>
-          <p className="text-xl text-muted-foreground font-body mb-8">
-            Join our community of explorers, scientists, and storytellers as we uncover the
-            mysteries that connect our world to the cosmos.
-          </p>
-          <Button size="lg" className="text-lg px-8 py-6">
-            Start Your Journey
-          </Button>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-heading font-bold mb-6 text-glow-primary">
+              Ready to Dive Deeper?
+            </h2>
+            <p className="text-xl text-muted-foreground font-body mb-8">
+              Join our community of explorers, scientists, and storytellers as we uncover the
+              mysteries that connect our world to the cosmos.
+            </p>
+            <Button size="lg" className="text-lg px-8 py-6 ripple-effect">
+              Start Your Journey
+            </Button>
+          </div>
+        </ScrollReveal>
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Literata } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { AnimatedBackground } from "@/components/animated-background";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -29,8 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${spaceGrotesk.variable} ${literata.variable} antialiased font-body`}>
+        <AnimatedBackground />
         <Navbar />
-        {children}
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
