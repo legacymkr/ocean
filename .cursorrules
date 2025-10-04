@@ -53,10 +53,10 @@
 ## Phase 3 — Storytelling Site (Public)
 - [X] Hero section in `src/app/page.tsx` with layered background, headline/subhead glow, bounce ArrowDown
 - [X] Timeline section with central vertical line; alternating cards (glass, hover border highlight, image hover scale-105)
-- [ ] Article index grid with animated cards, filters (tags/topics), search
-- [ ] Article page template: cover image/video, byline, reading progress, glowing pull-quotes, footnotes
-- [ ] Reusable CTA bars using secondary accent for AI features
-- [ ] SEO: metadata, OpenGraph, social images
+- [X] Article index grid with animated cards, filters (tags/topics), search
+- [X] Article page template: cover image/video, byline, reading progress, glowing pull-quotes, footnotes
+- [X] Reusable CTA bars using secondary accent for AI features
+- [X] SEO: metadata, OpenGraph, social images
 
 ## Phase 4 — AI Generator (UX shell, optional backend later)
 - [ ] Section scaffolding for AI storyline generator UI (secondary accent)

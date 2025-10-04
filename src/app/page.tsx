@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowDown, Sparkles, Waves } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { CTABar } from "@/components/cta-bar";
 
 export default function Home() {
   return (
@@ -255,22 +256,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <ScrollReveal>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-heading font-bold mb-6 text-glow-primary">
-              Ready to Dive Deeper?
-            </h2>
-            <p className="text-xl text-muted-foreground font-body mb-8">
-              Join our community of explorers, scientists, and storytellers as we uncover the
-              mysteries that connect our world to the cosmos.
-            </p>
-            <Button size="lg" className="text-lg px-8 py-6 ripple-effect">
-              Start Your Journey
-            </Button>
-          </div>
-        </ScrollReveal>
-      </section>
+      <CTABar
+        title="Ready to Dive Deeper?"
+        description="Join our community of explorers, scientists, and storytellers as we uncover the mysteries that connect our world to the cosmos."
+        buttonText="Start Your Journey"
+        buttonHref="/articles"
+        variant="primary"
+        icon="sparkles"
+      />
     </div>
   );
 }

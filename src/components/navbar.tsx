@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import { Sparkles, BookOpen } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -15,14 +15,22 @@ export function Navbar() {
             Astroqua
           </Link>
 
-          {/* Primary Action Button */}
-          <Button
-            size="sm"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect"
-          >
-            <Sparkles className="mr-2 h-4 w-4" />
-            Begin Journey
-          </Button>
+          {/* Navigation Links */}
+          <div className="flex items-center gap-4">
+            <Link href="/articles">
+              <Button variant="outline" size="sm" className="ripple-effect">
+                <BookOpen className="mr-2 h-4 w-4" />
+                Articles
+              </Button>
+            </Link>
+            <Button
+              size="sm"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect"
+            >
+              <Sparkles className="mr-2 h-4 w-4" />
+              Begin Journey
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
