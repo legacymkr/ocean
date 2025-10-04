@@ -24,6 +24,13 @@ const eslintConfig = [
     ],
   },
   {
+    files: ["generated/**/*"],
+    plugins: { prettier: prettierPlugin },
+    rules: {
+      "prettier/prettier": "off",
+    },
+  },
+  {
     plugins: { prettier: prettierPlugin },
     rules: {
       "prettier/prettier": "warn",

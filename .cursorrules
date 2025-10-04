@@ -23,7 +23,7 @@
 - [X] Initialize Next.js 15 + TypeScript in existing repo; ensure App Router enabled
 - [X] Configure `eslint`, `prettier`, `tsconfig` path aliases, strict mode
 - [ ] Install dependencies: shadcn/ui, lucide-react, zod, zustand, recharts, resend, uploadthing, prisma, @prisma/client, pg
-- [ ] Add `@vercel/postgres` or standard `pg` client for local dev; confirm Postgres connection
+- [X] Add `@vercel/postgres` or standard `pg` client for local dev; confirm Postgres connection
 - [ ] Initialize Prisma; create `.env` with `DATABASE_URL`, `RESEND_API_KEY`, `UPLOADTHING_SECRET`, `UPLOADTHING_APP_ID`
 - [ ] Set up `shadcn/ui` init; generate base components (button, card, input, textarea, badge, dialog, dropdown, tooltip, sheet, skeleton)
 
