@@ -6,14 +6,31 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20 pt-32">
-        <div className="max-w-4xl mx-auto space-y-8">
+      {/* Hero Section with Layered Background */}
+      <section className="relative flex-1 flex flex-col items-center justify-center text-center px-4 py-20 pt-32 overflow-hidden">
+        {/* Layered Background Effects */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Deep ocean gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+
+          {/* Bioluminescent glow spots */}
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+          <div
+            className="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-secondary/15 blur-2xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <div
+            className="absolute bottom-1/3 left-1/3 w-20 h-20 rounded-full bg-primary/8 blur-xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto space-y-8">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-glow-primary animate-float-up">
             ASTROQUA
           </h1>
           <p
-            className="text-lg md:text-xl text-foreground font-body max-w-2xl mx-auto animate-float-up"
+            className="text-lg md:text-xl text-foreground font-body max-w-2xl mx-auto animate-float-up text-glow-subtle"
             style={{ animationDelay: "0.2s" }}
           >
             Where the infinite depths of space meet the mysterious abyss of the ocean. Explore
@@ -26,7 +43,7 @@ export default function Home() {
           >
             <Button
               size="lg"
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect shadow-lg shadow-primary/25"
             >
               <Sparkles className="mr-2 h-5 w-5" />
               Begin Journey
@@ -34,7 +51,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground ripple-effect"
+              className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground ripple-effect shadow-lg shadow-primary/10"
             >
               <Waves className="mr-2 h-5 w-5" />
               Explore Stories
@@ -42,9 +59,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bounce Arrow */}
-        <div className="mt-16 animate-bounce animate-float-up" style={{ animationDelay: "0.6s" }}>
-          <ArrowDown className="h-8 w-8 text-primary mx-auto" />
+        {/* Enhanced Bounce Arrow */}
+        <div className="relative z-10 mt-16 animate-float-up" style={{ animationDelay: "0.6s" }}>
+          <div className="animate-bounce">
+            <ArrowDown className="h-8 w-8 text-primary mx-auto drop-shadow-lg" />
+          </div>
+          <div className="mt-2 text-sm text-muted-foreground font-body">Dive Deeper</div>
         </div>
       </section>
 
@@ -115,6 +135,121 @@ export default function Home() {
                 </CardContent>
               </Card>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-4xl font-heading font-bold text-center mb-16 text-glow-subtle">
+              The Journey Through Time
+            </h2>
+          </ScrollReveal>
+
+          <div className="relative">
+            {/* Central Vertical Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-secondary to-primary opacity-30" />
+
+            {/* Timeline Cards */}
+            <div className="space-y-16">
+              {/* Card 1 - Left */}
+              <ScrollReveal delay={0}>
+                <div className="flex items-center">
+                  <div className="w-1/2 pr-8">
+                    <Card className="glass-card group hover:scale-105 transition-all duration-300 hover:border-primary/50">
+                      <CardHeader>
+                        <CardTitle className="font-heading text-glow-secondary">
+                          The Discovery
+                        </CardTitle>
+                        <CardDescription className="font-body text-sm">
+                          2024 • Deep Sea Research Station
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground font-body">
+                          Dr. Elena Vasquez&apos;s team discovers anomalous readings at the deepest
+                          point of the Mariana Trench. The pressure readings don&apos;t match any
+                          known geological formations, suggesting something unprecedented.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="w-1/2 pl-8">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary/50 flex items-center justify-center mx-auto">
+                        <div className="w-8 h-8 rounded-full bg-primary animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Card 2 - Right */}
+              <ScrollReveal delay={200}>
+                <div className="flex items-center">
+                  <div className="w-1/2 pr-8">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-secondary/20 border-2 border-secondary/50 flex items-center justify-center mx-auto">
+                        <div className="w-8 h-8 rounded-full bg-secondary animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-1/2 pl-8">
+                    <Card className="glass-card group hover:scale-105 transition-all duration-300 hover:border-secondary/50">
+                      <CardHeader>
+                        <CardTitle className="font-heading text-glow-secondary">
+                          The Connection
+                        </CardTitle>
+                        <CardDescription className="font-body text-sm">
+                          2024 • International Space Station
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground font-body">
+                          Astronaut Marcus Chen observes the Earth&apos;s oceans mirroring movements
+                          in the cosmic void beyond our solar system. The patterns are too precise
+                          to be coincidence.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Card 3 - Left */}
+              <ScrollReveal delay={400}>
+                <div className="flex items-center">
+                  <div className="w-1/2 pr-8">
+                    <Card className="glass-card group hover:scale-105 transition-all duration-300 hover:border-primary/50">
+                      <CardHeader>
+                        <CardTitle className="font-heading text-glow-secondary">
+                          The Protocol
+                        </CardTitle>
+                        <CardDescription className="font-body text-sm">
+                          2025 • AI Research Facility
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground font-body">
+                          The Leviathan AI begins creating patterns that resemble ancient star
+                          charts found in underwater ruins. The machine&apos;s neural networks
+                          suggest a consciousness beyond human understanding.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="w-1/2 pl-8">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary/50 flex items-center justify-center mx-auto">
+                        <div className="w-8 h-8 rounded-full bg-primary animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

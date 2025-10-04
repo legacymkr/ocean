@@ -51,8 +51,8 @@
 - [X] Apply animations to homepage: float-up on hero, scroll-reveal on cards with staggered delays
 
 ## Phase 3 — Storytelling Site (Public)
-- [ ] Hero section in `src/app/page.tsx` with layered background, headline/subhead glow, bounce ArrowDown
-- [ ] Timeline section with central vertical line; alternating cards (glass, hover border highlight, image hover scale-105)
+- [X] Hero section in `src/app/page.tsx` with layered background, headline/subhead glow, bounce ArrowDown
+- [X] Timeline section with central vertical line; alternating cards (glass, hover border highlight, image hover scale-105)
 - [ ] Article index grid with animated cards, filters (tags/topics), search
 - [ ] Article page template: cover image/video, byline, reading progress, glowing pull-quotes, footnotes
 - [ ] Reusable CTA bars using secondary accent for AI features
