@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sparkles, BookOpen } from "lucide-react";
+import { Sparkles, BookOpen, Brain } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -16,11 +16,21 @@ export function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Link href="/articles">
               <Button variant="outline" size="sm" className="ripple-effect">
                 <BookOpen className="mr-2 h-4 w-4" />
                 Articles
+              </Button>
+            </Link>
+            <Link href="/ai-generator">
+              <Button
+                variant="outline"
+                size="sm"
+                className="ripple-effect border-secondary/50 hover:border-secondary text-secondary hover:text-secondary"
+              >
+                <Brain className="mr-2 h-4 w-4" />
+                AI Generator
               </Button>
             </Link>
             <Button

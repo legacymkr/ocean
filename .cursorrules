@@ -59,9 +59,9 @@
 - [X] SEO: metadata, OpenGraph, social images
 
 ## Phase 4 — AI Generator (UX shell, optional backend later)
-- [ ] Section scaffolding for AI storyline generator UI (secondary accent)
-- [ ] Inputs validated by Zod; client state via Zustand; staged scroll-reveal
-- [ ] Placeholder generation flow; hook in real model later (out of scope now)
+- [X] Section scaffolding for AI storyline generator UI (secondary accent)
+- [X] Inputs validated by Zod; client state via Zustand; staged scroll-reveal
+- [X] Placeholder generation flow; hook in real model later (out of scope now)
 
 ## Phase 5 — Data Layer & Models
 - [ ] Prisma schema: `User`, `Article`, `Tag`, `ArticleTag`, `MediaAsset`, `Role`
