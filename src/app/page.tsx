@@ -1,83 +1,123 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowDown, Sparkles, Waves } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="text-6xl md:text-8xl font-heading font-bold text-glow-primary">
+            ASTROQUA
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground font-body max-w-2xl mx-auto">
+            Where the infinite depths of space meet the mysterious abyss of the ocean. Explore
+            stories that blur the boundaries between cosmic wonder and aquatic horror.
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Sparkles className="mr-2 h-5 w-5" />
+              Begin Journey
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-6 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+            >
+              <Waves className="mr-2 h-5 w-5" />
+              Explore Stories
+            </Button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Bounce Arrow */}
+        <div className="mt-16 animate-bounce">
+          <ArrowDown className="h-8 w-8 text-primary mx-auto" />
+        </div>
+      </section>
+
+      {/* Preview Cards Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-heading font-bold text-center mb-12 text-glow-subtle">
+            Featured Mysteries
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+              <CardHeader>
+                <CardTitle className="font-heading text-glow-secondary">
+                  The Abyssal Station
+                </CardTitle>
+                <CardDescription className="font-body">
+                  A research facility at the bottom of the Mariana Trench discovers something that
+                  shouldn&apos;t exist...
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground font-body">
+                  Dr. Elena Vasquez reports strange readings from the deepest point on Earth. The
+                  pressure readings don&apos;t match any known geological formations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+              <CardHeader>
+                <CardTitle className="font-heading text-glow-secondary">Cosmic Currents</CardTitle>
+                <CardDescription className="font-body">
+                  When the International Space Station detects ocean-like patterns in deep space...
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground font-body">
+                  Astronaut Marcus Chen watches as the Earth&apos;s oceans seem to mirror movements in
+                  the cosmic void beyond our solar system.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card group hover:scale-105 transition-transform duration-300">
+              <CardHeader>
+                <CardTitle className="font-heading text-glow-secondary">
+                  The Leviathan Protocol
+                </CardTitle>
+                <CardDescription className="font-body">
+                  An AI designed to map the ocean floor begins exhibiting behaviors that suggest
+                  consciousness...
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground font-body">
+                  The machine&apos;s neural networks start creating patterns that resemble ancient star
+                  charts found in underwater ruins.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-primary/10 to-secondary/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-heading font-bold mb-6 text-glow-primary">
+            Ready to Dive Deeper?
+          </h2>
+          <p className="text-xl text-muted-foreground font-body mb-8">
+            Join our community of explorers, scientists, and storytellers as we uncover the
+            mysteries that connect our world to the cosmos.
+          </p>
+          <Button size="lg" className="text-lg px-8 py-6">
+            Start Your Journey
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }

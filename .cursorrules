@@ -28,15 +28,15 @@
 - [X] Set up `shadcn/ui` init; generate base components (button, card, input, textarea, badge, dialog, dropdown, tooltip, sheet, skeleton)
 
 ## Phase 1 — Brand & Theming
-  - [ ] Add fonts via `next/font`: Space Grotesk (headings), Inter (body)
-- [ ] Create theme tokens in CSS variables for colors per brief:
-  - [ ] Background: #000000 with layered radial gradients (rgba(49, 39, 131, 0.2), rgba(124, 63, 151, 0.2))
-  - [ ] Primary accent: hsl(213, 100%, 85%)
-  - [ ] Secondary accent: hsl(175, 90%, 45%)
-  - [ ] Text: hsl(210, 40%, 98%)
-- [ ] Configure shadcn theme to align tokens; hover/active states using glow accents
-- [ ] Implement text-glow utilities (text-shadow presets) for Space Grotesk headlines
-- [ ] Global layout scaffolding in `src/app/layout.tsx` with glassy containers
+- [X] Add fonts via `next/font`: Space Grotesk (headings), Inter (body)
+- [X] Create theme tokens in CSS variables for colors per brief:
+  - [X] Background: #000000 with layered radial gradients (rgba(49, 39, 131, 0.2), rgba(124, 63, 151, 0.2))
+  - [X] Primary accent: hsl(213, 100%, 85%)
+  - [X] Secondary accent: hsl(175, 90%, 45%)
+  - [X] Text: hsl(210, 40%, 98%)
+- [X] Configure shadcn theme to align tokens; hover/active states using glow accents
+- [X] Implement text-glow utilities (text-shadow presets) for Space Grotesk headlines
+- [X] Global layout scaffolding in `src/app/layout.tsx` with glassy containers
 
 ## Phase 2 — Core Animations & Utilities
 - [ ] Build `components/animated-background.tsx`:
