@@ -22,10 +22,10 @@
 ## Phase 0 — Foundations
 - [X] Initialize Next.js 15 + TypeScript in existing repo; ensure App Router enabled
 - [X] Configure `eslint`, `prettier`, `tsconfig` path aliases, strict mode
-- [ ] Install dependencies: shadcn/ui, lucide-react, zod, zustand, recharts, resend, uploadthing, prisma, @prisma/client, pg
+- [X] Install dependencies: shadcn/ui, lucide-react, zod, zustand, recharts, resend, uploadthing, prisma, @prisma/client, pg
 - [X] Add `@vercel/postgres` or standard `pg` client for local dev; confirm Postgres connection
-- [ ] Initialize Prisma; create `.env` with `DATABASE_URL`, `RESEND_API_KEY`, `UPLOADTHING_SECRET`, `UPLOADTHING_APP_ID`
-- [ ] Set up `shadcn/ui` init; generate base components (button, card, input, textarea, badge, dialog, dropdown, tooltip, sheet, skeleton)
+- [X] Initialize Prisma; create `.env` with `DATABASE_URL`, `RESEND_API_KEY`, `UPLOADTHING_SECRET`, `UPLOADTHING_APP_ID`
+- [X] Set up `shadcn/ui` init; generate base components (button, card, input, textarea, badge, dialog, dropdown, tooltip, sheet, skeleton)
 
 ## Phase 1 — Brand & Theming
   - [ ] Add fonts via `next/font`: Space Grotesk (headings), Inter (body)
