@@ -8,18 +8,18 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-6xl md:text-8xl font-heading font-bold text-glow-primary">
+          <h1 className="text-6xl md:text-8xl font-heading font-bold text-glow-primary animate-float-up">
             ASTROQUA
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-body max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground font-body max-w-2xl mx-auto animate-float-up" style={{ animationDelay: '0.2s' }}>
             Where the infinite depths of space meet the mysterious abyss of the ocean. Explore
             stories that blur the boundaries between cosmic wonder and aquatic horror.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-float-up" style={{ animationDelay: '0.4s' }}>
             <Button
               size="lg"
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect"
             >
               <Sparkles className="mr-2 h-5 w-5" />
               Begin Journey
@@ -27,7 +27,7 @@ export default function Home() {
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+              className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground ripple-effect"
             >
               <Waves className="mr-2 h-5 w-5" />
               Explore Stories
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* Bounce Arrow */}
-        <div className="mt-16 animate-bounce">
+        <div className="mt-16 animate-bounce animate-float-up" style={{ animationDelay: '0.6s' }}>
           <ArrowDown className="h-8 w-8 text-primary mx-auto" />
         </div>
       </section>

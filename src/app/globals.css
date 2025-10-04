@@ -6,7 +6,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-literata);
   --font-heading: var(--font-space-grotesk);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -45,84 +45,84 @@
 
 :root {
   --radius: 0.625rem;
-
-  /* Astroqua Dark Theme - Space Ocean Mysteries */
-  --background: #000000;
-  --foreground: hsl(210, 40%, 98%);
-  --card: rgba(0, 0, 0, 0.8);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: rgba(0, 0, 0, 0.9);
-  --popover-foreground: hsl(210, 40%, 98%);
-
-  /* Primary Accent - Ethereal Light Blue */
-  --primary: hsl(213, 100%, 85%);
-  --primary-foreground: #000000;
-
-  /* Secondary Accent - Vibrant Cyan/Teal */
-  --secondary: hsl(175, 90%, 45%);
-  --secondary-foreground: #000000;
-
-  --muted: rgba(255, 255, 255, 0.1);
-  --muted-foreground: rgba(255, 255, 255, 0.6);
-  --accent: hsl(175, 90%, 45%);
-  --accent-foreground: #000000;
-  --destructive: hsl(0, 84%, 60%);
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: hsl(213, 100%, 85%);
-
+  
+  /* Bioluminescent Deep-Sea Theme */
+  --background: #041923; /* Ocean Blue - deeper base */
+  --foreground: #E3F8FF; /* Soft White */
+  --card: rgba(10, 44, 56, 0.8); /* Semi-transparent Dark Teal */
+  --card-foreground: #E3F8FF;
+  --popover: rgba(10, 44, 56, 0.9);
+  --popover-foreground: #E3F8FF;
+  
+  /* Primary Accent - Light Cyan (Bioluminescence) */
+  --primary: #3CA8C1;
+  --primary-foreground: #041923;
+  
+  /* Secondary Accent - Aqua Blue (Bubble color) */
+  --secondary: #1F5C73;
+  --secondary-foreground: #E3F8FF;
+  
+  --muted: rgba(60, 168, 193, 0.1);
+  --muted-foreground: rgba(227, 248, 255, 0.6);
+  --accent: #3CA8C1;
+  --accent-foreground: #041923;
+  --destructive: #ff6b6b;
+  --border: rgba(60, 168, 193, 0.2);
+  --input: rgba(60, 168, 193, 0.1);
+  --ring: #3CA8C1;
+  
   /* Chart colors for analytics */
-  --chart-1: hsl(213, 100%, 85%);
-  --chart-2: hsl(175, 90%, 45%);
-  --chart-3: rgba(49, 39, 131, 0.8);
-  --chart-4: rgba(124, 63, 151, 0.8);
-  --chart-5: hsl(213, 100%, 70%);
-
+  --chart-1: #3CA8C1;
+  --chart-2: #1F5C73;
+  --chart-3: #0A2C38;
+  --chart-4: #2A7A8A;
+  --chart-5: #4BB3C7;
+  
   /* Sidebar */
-  --sidebar: rgba(0, 0, 0, 0.9);
-  --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(213, 100%, 85%);
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: hsl(175, 90%, 45%);
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: hsl(213, 100%, 85%);
+  --sidebar: rgba(10, 44, 56, 0.9);
+  --sidebar-foreground: #E3F8FF;
+  --sidebar-primary: #3CA8C1;
+  --sidebar-primary-foreground: #041923;
+  --sidebar-accent: #1F5C73;
+  --sidebar-accent-foreground: #E3F8FF;
+  --sidebar-border: rgba(60, 168, 193, 0.2);
+  --sidebar-ring: #3CA8C1;
 }
 
 /* Dark theme is the default for Astroqua */
 .dark {
-  /* Same as root - we're using dark as default */
-  --background: #000000;
-  --foreground: hsl(210, 40%, 98%);
-  --card: rgba(0, 0, 0, 0.8);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: rgba(0, 0, 0, 0.9);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(213, 100%, 85%);
-  --primary-foreground: #000000;
-  --secondary: hsl(175, 90%, 45%);
-  --secondary-foreground: #000000;
-  --muted: rgba(255, 255, 255, 0.1);
-  --muted-foreground: rgba(255, 255, 255, 0.6);
-  --accent: hsl(175, 90%, 45%);
-  --accent-foreground: #000000;
-  --destructive: hsl(0, 84%, 60%);
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: hsl(213, 100%, 85%);
-  --chart-1: hsl(213, 100%, 85%);
-  --chart-2: hsl(175, 90%, 45%);
-  --chart-3: rgba(49, 39, 131, 0.8);
-  --chart-4: rgba(124, 63, 151, 0.8);
-  --chart-5: hsl(213, 100%, 70%);
-  --sidebar: rgba(0, 0, 0, 0.9);
-  --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(213, 100%, 85%);
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: hsl(175, 90%, 45%);
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: hsl(213, 100%, 85%);
+  /* Same as root - we're using bioluminescent theme as default */
+  --background: #041923;
+  --foreground: #E3F8FF;
+  --card: rgba(10, 44, 56, 0.8);
+  --card-foreground: #E3F8FF;
+  --popover: rgba(10, 44, 56, 0.9);
+  --popover-foreground: #E3F8FF;
+  --primary: #3CA8C1;
+  --primary-foreground: #041923;
+  --secondary: #1F5C73;
+  --secondary-foreground: #E3F8FF;
+  --muted: rgba(60, 168, 193, 0.1);
+  --muted-foreground: rgba(227, 248, 255, 0.6);
+  --accent: #3CA8C1;
+  --accent-foreground: #041923;
+  --destructive: #ff6b6b;
+  --border: rgba(60, 168, 193, 0.2);
+  --input: rgba(60, 168, 193, 0.1);
+  --ring: #3CA8C1;
+  --chart-1: #3CA8C1;
+  --chart-2: #1F5C73;
+  --chart-3: #0A2C38;
+  --chart-4: #2A7A8A;
+  --chart-5: #4BB3C7;
+  --sidebar: rgba(10, 44, 56, 0.9);
+  --sidebar-foreground: #E3F8FF;
+  --sidebar-primary: #3CA8C1;
+  --sidebar-primary-foreground: #041923;
+  --sidebar-accent: #1F5C73;
+  --sidebar-accent-foreground: #E3F8FF;
+  --sidebar-border: rgba(60, 168, 193, 0.2);
+  --sidebar-ring: #3CA8C1;
 }
 
 @layer base {
@@ -131,52 +131,94 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Astroqua layered background with radial gradients */
-    background-image:
-      radial-gradient(circle at 20% 80%, rgba(49, 39, 131, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(124, 63, 151, 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(49, 39, 131, 0.1) 0%, transparent 50%);
+    /* Abyssal gradient - vertical transition from Dark Teal to Ocean Blue */
+    background: linear-gradient(180deg, #0A2C38 0%, #041923 100%);
     background-attachment: fixed;
+    min-height: 100vh;
   }
 }
 
 @layer utilities {
-  /* Text glow utilities for Space Grotesk headlines */
+  /* Bioluminescent text glow utilities for Space Grotesk headlines */
   .text-glow-primary {
-    text-shadow:
-      0 0 10px hsl(213, 100%, 85%),
-      0 0 20px hsl(213, 100%, 85%),
-      0 0 30px hsl(213, 100%, 85%);
+    text-shadow: 
+      0 0 10px #3CA8C1,
+      0 0 20px #3CA8C1,
+      0 0 30px #3CA8C1,
+      0 0 40px #3CA8C1;
   }
-
+  
   .text-glow-secondary {
-    text-shadow:
-      0 0 10px hsl(175, 90%, 45%),
-      0 0 20px hsl(175, 90%, 45%),
-      0 0 30px hsl(175, 90%, 45%);
+    text-shadow: 
+      0 0 10px #1F5C73,
+      0 0 20px #1F5C73,
+      0 0 30px #1F5C73;
   }
-
+  
   .text-glow-subtle {
-    text-shadow:
-      0 0 5px hsl(213, 100%, 85%),
-      0 0 10px hsl(213, 100%, 85%);
+    text-shadow: 
+      0 0 5px #3CA8C1,
+      0 0 10px #3CA8C1;
   }
-
-  /* Glassy container utilities */
+  
+  /* Floating glassy container utilities with backdrop-blur */
   .glass-card {
-    @apply bg-card/50 backdrop-blur-md border border-border/30;
+    @apply bg-card backdrop-blur-md border border-border/30;
+    background: rgba(10, 44, 56, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
-
+  
   .glass-card:hover {
     @apply border-primary/50;
+    background: rgba(10, 44, 56, 0.8);
+    box-shadow: 0 0 20px rgba(60, 168, 193, 0.3);
   }
-
+  
+  /* Floating animation for UI elements */
+  .animate-float-up {
+    animation: floatUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes floatUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Ripple effect for buttons */
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(60, 168, 193, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .ripple-effect:active::before {
+    width: 300px;
+    height: 300px;
+  }
+  
   /* Font utilities */
   .font-heading {
     font-family: var(--font-space-grotesk);
   }
-
+  
   .font-body {
-    font-family: var(--font-inter);
+    font-family: var(--font-literata);
   }
 }
