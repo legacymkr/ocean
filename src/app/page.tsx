@@ -6,17 +6,23 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20 pt-32">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-6xl md:text-8xl font-heading font-bold text-glow-primary animate-float-up">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-glow-primary animate-float-up">
             ASTROQUA
           </h1>
-          <p className="text-xl md:text-2xl text-foreground font-body max-w-2xl mx-auto animate-float-up" style={{ animationDelay: '0.2s' }}>
+          <p
+            className="text-lg md:text-xl text-foreground font-body max-w-2xl mx-auto animate-float-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             Where the infinite depths of space meet the mysterious abyss of the ocean. Explore
             stories that blur the boundaries between cosmic wonder and aquatic horror.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-float-up" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-float-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <Button
               size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground ripple-effect"
@@ -36,7 +42,7 @@ export default function Home() {
         </div>
 
         {/* Bounce Arrow */}
-        <div className="mt-16 animate-bounce animate-float-up" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-16 animate-bounce animate-float-up" style={{ animationDelay: "0.6s" }}>
           <ArrowDown className="h-8 w-8 text-primary mx-auto" />
         </div>
       </section>
@@ -76,8 +82,8 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground font-body">
-                  Astronaut Marcus Chen watches as the Earth&apos;s oceans seem to mirror movements in
-                  the cosmic void beyond our solar system.
+                  Astronaut Marcus Chen watches as the Earth&apos;s oceans seem to mirror movements
+                  in the cosmic void beyond our solar system.
                 </p>
               </CardContent>
             </Card>
@@ -94,8 +100,8 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground font-body">
-                  The machine&apos;s neural networks start creating patterns that resemble ancient star
-                  charts found in underwater ruins.
+                  The machine&apos;s neural networks start creating patterns that resemble ancient
+                  star charts found in underwater ruins.
                 </p>
               </CardContent>
             </Card>

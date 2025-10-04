@@ -45,84 +45,84 @@
 
 :root {
   --radius: 0.625rem;
-  
+
   /* Bioluminescent Deep-Sea Theme */
   --background: #041923; /* Ocean Blue - deeper base */
-  --foreground: #E3F8FF; /* Soft White */
+  --foreground: #e3f8ff; /* Soft White */
   --card: rgba(10, 44, 56, 0.8); /* Semi-transparent Dark Teal */
-  --card-foreground: #E3F8FF;
+  --card-foreground: #e3f8ff;
   --popover: rgba(10, 44, 56, 0.9);
-  --popover-foreground: #E3F8FF;
-  
+  --popover-foreground: #e3f8ff;
+
   /* Primary Accent - Light Cyan (Bioluminescence) */
-  --primary: #3CA8C1;
+  --primary: #3ca8c1;
   --primary-foreground: #041923;
-  
+
   /* Secondary Accent - Aqua Blue (Bubble color) */
-  --secondary: #1F5C73;
-  --secondary-foreground: #E3F8FF;
-  
+  --secondary: #1f5c73;
+  --secondary-foreground: #e3f8ff;
+
   --muted: rgba(60, 168, 193, 0.1);
   --muted-foreground: rgba(227, 248, 255, 0.6);
-  --accent: #3CA8C1;
+  --accent: #3ca8c1;
   --accent-foreground: #041923;
   --destructive: #ff6b6b;
   --border: rgba(60, 168, 193, 0.2);
   --input: rgba(60, 168, 193, 0.1);
-  --ring: #3CA8C1;
-  
+  --ring: #3ca8c1;
+
   /* Chart colors for analytics */
-  --chart-1: #3CA8C1;
-  --chart-2: #1F5C73;
-  --chart-3: #0A2C38;
-  --chart-4: #2A7A8A;
-  --chart-5: #4BB3C7;
-  
+  --chart-1: #3ca8c1;
+  --chart-2: #1f5c73;
+  --chart-3: #0a2c38;
+  --chart-4: #2a7a8a;
+  --chart-5: #4bb3c7;
+
   /* Sidebar */
   --sidebar: rgba(10, 44, 56, 0.9);
-  --sidebar-foreground: #E3F8FF;
-  --sidebar-primary: #3CA8C1;
+  --sidebar-foreground: #e3f8ff;
+  --sidebar-primary: #3ca8c1;
   --sidebar-primary-foreground: #041923;
-  --sidebar-accent: #1F5C73;
-  --sidebar-accent-foreground: #E3F8FF;
+  --sidebar-accent: #1f5c73;
+  --sidebar-accent-foreground: #e3f8ff;
   --sidebar-border: rgba(60, 168, 193, 0.2);
-  --sidebar-ring: #3CA8C1;
+  --sidebar-ring: #3ca8c1;
 }
 
 /* Dark theme is the default for Astroqua */
 .dark {
   /* Same as root - we're using bioluminescent theme as default */
   --background: #041923;
-  --foreground: #E3F8FF;
+  --foreground: #e3f8ff;
   --card: rgba(10, 44, 56, 0.8);
-  --card-foreground: #E3F8FF;
+  --card-foreground: #e3f8ff;
   --popover: rgba(10, 44, 56, 0.9);
-  --popover-foreground: #E3F8FF;
-  --primary: #3CA8C1;
+  --popover-foreground: #e3f8ff;
+  --primary: #3ca8c1;
   --primary-foreground: #041923;
-  --secondary: #1F5C73;
-  --secondary-foreground: #E3F8FF;
+  --secondary: #1f5c73;
+  --secondary-foreground: #e3f8ff;
   --muted: rgba(60, 168, 193, 0.1);
   --muted-foreground: rgba(227, 248, 255, 0.6);
-  --accent: #3CA8C1;
+  --accent: #3ca8c1;
   --accent-foreground: #041923;
   --destructive: #ff6b6b;
   --border: rgba(60, 168, 193, 0.2);
   --input: rgba(60, 168, 193, 0.1);
-  --ring: #3CA8C1;
-  --chart-1: #3CA8C1;
-  --chart-2: #1F5C73;
-  --chart-3: #0A2C38;
-  --chart-4: #2A7A8A;
-  --chart-5: #4BB3C7;
+  --ring: #3ca8c1;
+  --chart-1: #3ca8c1;
+  --chart-2: #1f5c73;
+  --chart-3: #0a2c38;
+  --chart-4: #2a7a8a;
+  --chart-5: #4bb3c7;
   --sidebar: rgba(10, 44, 56, 0.9);
-  --sidebar-foreground: #E3F8FF;
-  --sidebar-primary: #3CA8C1;
+  --sidebar-foreground: #e3f8ff;
+  --sidebar-primary: #3ca8c1;
   --sidebar-primary-foreground: #041923;
-  --sidebar-accent: #1F5C73;
-  --sidebar-accent-foreground: #E3F8FF;
+  --sidebar-accent: #1f5c73;
+  --sidebar-accent-foreground: #e3f8ff;
   --sidebar-border: rgba(60, 168, 193, 0.2);
-  --sidebar-ring: #3CA8C1;
+  --sidebar-ring: #3ca8c1;
 }
 
 @layer base {
@@ -132,7 +132,7 @@
   body {
     @apply bg-background text-foreground;
     /* Abyssal gradient - vertical transition from Dark Teal to Ocean Blue */
-    background: linear-gradient(180deg, #0A2C38 0%, #041923 100%);
+    background: linear-gradient(180deg, #0a2c38 0%, #041923 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
@@ -141,26 +141,26 @@
 @layer utilities {
   /* Bioluminescent text glow utilities for Space Grotesk headlines */
   .text-glow-primary {
-    text-shadow: 
-      0 0 10px #3CA8C1,
-      0 0 20px #3CA8C1,
-      0 0 30px #3CA8C1,
-      0 0 40px #3CA8C1;
+    text-shadow:
+      0 0 10px #3ca8c1,
+      0 0 20px #3ca8c1,
+      0 0 30px #3ca8c1,
+      0 0 40px #3ca8c1;
   }
-  
+
   .text-glow-secondary {
-    text-shadow: 
-      0 0 10px #1F5C73,
-      0 0 20px #1F5C73,
-      0 0 30px #1F5C73;
+    text-shadow:
+      0 0 10px #1f5c73,
+      0 0 20px #1f5c73,
+      0 0 30px #1f5c73;
   }
-  
+
   .text-glow-subtle {
-    text-shadow: 
-      0 0 5px #3CA8C1,
-      0 0 10px #3CA8C1;
+    text-shadow:
+      0 0 5px #3ca8c1,
+      0 0 10px #3ca8c1;
   }
-  
+
   /* Floating glassy container utilities with backdrop-blur */
   .glass-card {
     @apply bg-card backdrop-blur-md border border-border/30;
@@ -168,35 +168,35 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-  
+
   .glass-card:hover {
     @apply border-primary/50;
     background: rgba(10, 44, 56, 0.8);
     box-shadow: 0 0 20px rgba(60, 168, 193, 0.3);
   }
-  
+
   /* Floating animation for UI elements */
   .animate-float-up {
     animation: floatUp 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
   }
-  
+
   @keyframes floatUp {
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   /* Ripple effect for buttons */
   .ripple-effect {
     position: relative;
     overflow: hidden;
   }
-  
+
   .ripple-effect::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -205,19 +205,21 @@
     border-radius: 50%;
     background: rgba(60, 168, 193, 0.3);
     transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+    transition:
+      width 0.6s,
+      height 0.6s;
   }
-  
+
   .ripple-effect:active::before {
     width: 300px;
     height: 300px;
   }
-  
+
   /* Font utilities */
   .font-heading {
     font-family: var(--font-space-grotesk);
   }
-  
+
   .font-body {
     font-family: var(--font-literata);
   }
